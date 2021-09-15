@@ -1,0 +1,25 @@
+spring:
+    application:
+      name: gamification
+    datasource:
+      url: jdbc:postgresql://localhost:5432/gamification
+      driverClassName: org.postgresql.Driver
+      username: postgres
+      password: paula
+      platform: postgres
+      initialization-mode: always
+      continue-on-error: true
+      hikari:
+        schema: gamification
+    jpa:
+        properties:
+          hibernate.format_sql: true
+        show-sql: true
+        hibernate:
+          ddl-auto: update
+logging:
+  level:
+    root: DEBUG
+
+server:
+    port: 8080
